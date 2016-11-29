@@ -359,15 +359,16 @@ type PushEvent struct {
 	DistinctSize *int                 `json:"distinct_size,omitempty"`
 
 	// The following fields are only populated by Webhook events.
-	After      *string          `json:"after,omitempty"`
-	Created    *bool            `json:"created,omitempty"`
-	Deleted    *bool            `json:"deleted,omitempty"`
-	Forced     *bool            `json:"forced,omitempty"`
-	BaseRef    *string          `json:"base_ref,omitempty"`
-	Compare    *string          `json:"compare,omitempty"`
-	HeadCommit *PushEventCommit `json:"head_commit,omitempty"`
-	Pusher     *User            `json:"pusher,omitempty"`
-	Sender     *User            `json:"sender,omitempty"`
+	After        *string          `json:"after,omitempty"`
+	Created      *bool            `json:"created,omitempty"`
+	Deleted      *bool            `json:"deleted,omitempty"`
+	Forced       *bool            `json:"forced,omitempty"`
+	BaseRef      *string          `json:"base_ref,omitempty"`
+	Compare      *string          `json:"compare,omitempty"`
+	HeadCommit   *PushEventCommit `json:"head_commit,omitempty"`
+	Pusher       *User            `json:"pusher,omitempty"`
+	Sender       *User            `json:"sender,omitempty"`
+	Installation *Installation    `json:"installation,omitempty"`
 }
 
 func (p PushEvent) String() string {
